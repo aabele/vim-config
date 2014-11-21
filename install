@@ -2,5 +2,9 @@
 
 set -e
 
-ln -s tmp/vim-pathogen/autoload autoload
-ln -s vim.rc ../.vimrc
+git submodule update --init --recursive
+
+ln -fs tmp/vim-pathogen/autoload autoload
+
+ln -fs ./ ~/.vim
+ln -fs vim.rc ~/.vimrc
