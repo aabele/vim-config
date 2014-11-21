@@ -1,0 +1,36 @@
+[submodule "bundle/indentpython.vim"]
+	path = bundle/indentpython.vim
+	url = https://github.com/vim-scripts/indentpython.vim.git
+[submodule "bundle/jshint2.vim"]
+	path = bundle/jshint2.vim
+	url = git@github.com:Shutnik/jshint2.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = git://github.com/klen/python-mode.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/tern_for_vim"]
+	path = bundle/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-jsbeautify"]
+	path = bundle/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "bundle/vim-nerdtree-tabs"]
+	path = bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
