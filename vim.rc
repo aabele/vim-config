@@ -1,0 +1,99 @@
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set nocompatible 
+set number
+set guioptions+=m
+set guioptions-=T
+set colorcolumn=79
+set nowrap 
+set tabstop=4
+set smarttab
+set shiftwidth=4
+set autoindent
+set expandtab
+set number
+set mouse=a
+set clipboard=unnamed
+set guifont=Monaco\ 10 
+set nobackup
+
+colorscheme codeschool 
+
+autocmd FileType htmldjango :setlocal sw=4 ts=4 sts=4
+
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" Hide toolbars GUI
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+
+" Minibufexpl
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pep8"
+let g:pymode_lint_write = 1 
+let g:pymode_folding = 0 
+
+" Class browser 
+
+nmap <F4> :TagbarToggle<CR>
+
+" Nerdtree
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
+autocmd vimenter * NERDTree
+let NERDTreeIgnore = ['\.pyc$', '\.bak$', '\.py\~$', '\.BACKUP\.*', '\.orig$', '\.BASE\.*', '\.LOCAL\.*', '\.REMOTE\.*']
+let NERDTreeShowBookmarks=1
+map <F2> :NERDTreeToggle<CR>
+
+map <F3> :tabclose<CR>
+map <F5> :edit!<CR>
+au BufWritePost *.js :JSHint
+
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" CTRd-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V> "+gP
+map <S-Insert> "+gP
+
+cmap <C-V> <C-R>+
+cmap <S-Insert> <C-R>+
+
+" Pasting blockwise and linewise selections is not possible in Insert and
+" Visual mode without the +virtualedit feature.  They are pasted as if they
+" were characterwise instead.
+" Uses the paste.vim autoload script.
+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+imap <S-Insert> 	<C-V>
+vmap <S-Insert> 	<C-V>
+
+" Use CTRL-Q to do what CTRL-V used to do
+noremap <C-Q>   	<C-V>
+
+" Avoid slow save
+let g:pymode_rope = 0
+

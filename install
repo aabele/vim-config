@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+ln -s tmp/vim-pathogen/autoload autoload
+ln -s vim.rc ../.vimrc
