@@ -6,5 +6,7 @@ git submodule update --init --recursive
 
 ln -fs tmp/vim-pathogen/autoload autoload
 
-ln -fs ./ ~/.vim
-ln -fs vim.rc ~/.vimrc
+cd ..
+rm -Rf .vim .vimrc
+ln -s vim-config .vim
+ln -s vim-config/vim.rc .vimrc
