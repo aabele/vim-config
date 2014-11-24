@@ -10,3 +10,6 @@ cd ..
 rm -Rf .vim .vimrc
 ln -s vim-config .vim
 ln -s vim-config/vim.rc .vimrc
+
+cd vim-config/bundle/tern_for_vim
+npm install
