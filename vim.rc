@@ -17,7 +17,7 @@ set expandtab
 set number
 set mouse=a
 set clipboard=unnamed
-set guifont=Monaco\ 10 
+set guifont=Monaco\ 9 
 set nobackup
 set spell spelllang=en_us
 
@@ -43,7 +43,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pep8"
 let g:pymode_lint_write = 1 
-let g:pymode_folding = 0 
+let g:pymode_folding = 0
+
+" Javascript
+
+let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs'
 
 " Class browser 
 
