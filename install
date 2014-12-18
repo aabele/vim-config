@@ -11,5 +11,8 @@ rm -Rf .vim .vimrc
 ln -s vim-config .vim
 ln -s vim-config/vim.rc .vimrc
 
-cd vim-config/bundle/tern_for_vim
+cd ~/vim-config/bundle/tern_for_vim
 npm install
+
+cd ~/vim-config/bundle/vimproc.vim
+make
